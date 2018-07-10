@@ -1,0 +1,9 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+body {
+    background: #0069d9;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+}

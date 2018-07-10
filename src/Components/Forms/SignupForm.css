@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.signup-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 360px;
+    height: 70px;
+    background: #ffffff;
+    border-radius: 50px;
+    transform: translate(-50%, -50%);
+    transition: all .5s;
+}
+
+.signup-form .form-head {
+    z-index: 40;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 100%;
+    background: #f50057;
+    font-size: 30px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.signup-form .form-head .text {
+    display: none;
+}
+
+.signup-form .form-head .text::before {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.signup-form .form-body {
+    overflow: hidden;
+    height: 70px;
+    border-radius: 50px;
+}
+
+.signup-form .form-body .error-text{
+    z-index: 25;
+    display: none;
+    position: absolute;
+    top: 4px;
+    left: 80px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #b71c1c;
+}
+
+.signup-form .form-body .form-controls {
+    z-index: 5;
+    position: relative;
+    top: 0;
+    transition: .2s ease-in;
+}
+
+.signup-form .form-body .form-controls input {
+    display: block;
+    width: 100%;
+    height: 70px;
+    padding: 10px 60px 10px 80px;
+    font-size: 18px;
+    color: #666;
+    border: none;
+    border-radius: 50px;
+}
+
+.signup-form .form-body .form-controls input:focus{
+    outline: none;
+}
+
+.signup-form .form-action {
+    z-index: 50;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background: #fefefe;
+    color: inherit;
+    text-align: center;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: .3s;
+}
+
+.signup-form .form-action:hover {
+    background: #f9f9f9;
+}
+
+.signup-form .form-action .icon-action {
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    font-variant: normal;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: auto;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+    transition: .2s ease-in;
+}
+
+.signup-form .form-action .icon-action::after {
+    line-height: 50px;
+    content: "\f061";
+}
+
+.signup-form#signup .form-action .icon-action::after {
+    display: none;
+}
+
+.signup-form .form-action .icon-action.back {
+    transform: rotate(180deg);
+}
+
+.icon-placeholder {
+    font-size: 15px;
+    line-height: 70px;
+}
+
+.signup-form#signup {
+    width: 100px;
+    color: #ffffff;
+}
+
+.signup-form#signup .form-head {
+    top: -38px;
+    left: -20%;
+    width: 150px;
+    height: 150px;
+    font-size: 30px;
+    border-radius: 100%;
+}
+
+.signup-form#signup .form-head .icon-placeholder {
+    display: none;
+}
+
+.signup-form#signup .form-head .text {
+    display: block;
+    width: 150px;
+    text-align: center;
+    padding: 60px 0px;
+}
+
+.signup-form#signup .form-head .text::before{
+    content: 'Sign Up';
+}
+
+.signup-form#signup .form-action {
+    right: 100px;
+    background: none;
+    line-height: 65px;
+}
+
+.signup-form#signup .form-action .icon-action.back {
+    rotate: 0;
+}
+
+.signup-form#success {
+    color: #fff;
+}
+
+.signup-form#success .form-head {
+    width: 100%;
+    background: #00E676;
+}
+
+.signup-form#success .form-head .icon-placeholder {
+    display: none;
+}
+
+.signup-form#success .form-head .text {
+    display: block;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.signup-form#success .form-head .text:before{
+    content: 'Success';
+}
+
+.signup-form#success .form-action {
+    right: 90px;
+    background: none;
+    line-height: 65px;
+}
+.signup-form#success .form-action .icon-action.back {
+    rotate: 0;
+}
+
+.signup-form#success .form-action .icon-action::after {
+    display: none;
+    content: '';
+}
+
+.signup-form#name {
+    color: #9C27B0;
+}
+
+.signup-form#name .form-head {
+    background: #9C27B0;
+}
+
+.signup-form#name .form-head .icon-placeholder::after{
+    content: 'fullname';
+}
+
+.signup-form#phone {
+    color: #009688;
+}
+
+.signup-form#phone .form-head {
+    background: #009688;
+}
+
+.signup-form#phone .form-head .icon-placeholder::after{
+    content: 'phone';
+}
+
+.signup-form#phone .form-body .form-controls {
+    top: -70px;
+}
+
+.signup-form#email {
+    color: #039BE5;
+}
+
+.signup-form#email .form-head {
+    background: #039BE5;
+}
+
+.signup-form#email .form-head .icon-placeholder::after {
+    content: 'email';
+}
+
+.signup-form#email .form-body .form-controls {
+    top: -140px;
+}
+
+.signup-form#password {
+    color: #37474F;
+}
+
+.signup-form#password .form-head {
+    background: #37474F;
+}
+.signup-form#password .form-head .icon-placeholder::after {
+    content: 'password';
+}
+
+.signup-form#password .form-body .form-controls {
+    top: -210px;
+}
+
+.signup-form#password-repeat {
+    color: #212121;
+}
+
+.signup-form#password-repeat .form-head {
+    background: #212121;
+}
+
+.signup-form#password-repeat .form-head .icon-placeholder::after{
+    content: 'again';
+}
+
+.signup-form#password-repeat .form-body .form-controls {
+    top: -280px;
+}
+
+.signup-form.error .form-head {
+    background: #b71c1c !important;
+}
+
+.signup-form.error .form-head .icon-placeholder::after {
+    content: 'close' !important;
+}
+
+.signup-form.error .form-body .form-controls input[type="text"]:-moz-placeholder {
+    color: #b71c1c;
+    font-style: italic;
+}
+
+.signup-form.error .form-body .form-controls input[type="text"]::-moz-placeholder {
+    color: #b71c1c;
+    font-style: italic;
+}
+
+.signup-form.error .form-body .form-controls input[type="text"]:-ms-input-placeholder {
+    color: #bfbfbf;
+    font-style: italic;
+}
+
+.signup-form.error .form-body .form-controls input[type="text"]::-webkit-input-placeholder {
+    color: #b71c1c;
+    font-style: italic;
+}
