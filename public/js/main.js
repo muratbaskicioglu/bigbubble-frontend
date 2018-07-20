@@ -14,6 +14,18 @@ $(document).ready(function() {
 
         }
 
+        if($(this).closest('.login-form').attr('id') == 'login') {
+
+            $('.login-form').attr('id', 'name');
+            $('.icon-action').addClass('back');
+
+        } else if($(this).closest('.login-form').attr('id') == 'success') {
+
+            $('.login-form').attr('id', 'login');
+            $('input').val('');
+
+        }
+
     });
 
     $('.form-action').click(function() {
